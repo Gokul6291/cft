@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('submit stack') { 
             steps {
-            bat "aws cloudformation create-stack --stack-name testjenkinscft --template-body file://S3bucket.json --region 'mumbai'"
+            bat "aws cloudformation create-stack --stack-name testjenkinscft --template-body file://S3bucket.json"
           
           }
         }
