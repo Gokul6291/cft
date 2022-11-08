@@ -3,8 +3,6 @@ pipeline {
     stages {
         stage('Clone Repo') { 
             steps {
-          bat "export AWS_DEFAULT_REGION=ap-south-1"
-          
 bat "aws cloudformation create-stack --stack-name testjenkinscft --template-body file://S3bucket.json --region 'ap-south-1'"
           
           }
