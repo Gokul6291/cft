@@ -1,7 +1,7 @@
 pipeline {
     agent any 
     stages {
-        stage('Clone Repo') { 
+        stage('submit stack') { 
             steps {
             bat "aws cloudformation create-stack --stack-name testjenkinscft --template-body file://S3bucket.json --region 'ap-south-1'"
           
