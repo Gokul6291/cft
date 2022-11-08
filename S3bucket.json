@@ -1,12 +1,126 @@
 {
-    "AWSTemplateFormatVersion" : "2010-09-09",
-    "Description" : "A sample template",
-        "Resources" : {	 
-           "myS3Bucket": {
-                "Type" : "AWS::S3::Bucket",
-                "Properties" : {
-                           "BucketName" : "jenkinstest"
-                }}
-            
-}
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Metadata": {
+        "AWS::CloudFormation::Designer": {
+            "86fd21f1-05d1-4020-97fc-a097d11c2496": {
+                "size": {
+                    "width": 60,
+                    "height": 60
+                },
+                "position": {
+                    "x": 434,
+                    "y": 82
+                },
+                "z": 0
+            },
+            "f4ddff80-5d5d-49ca-b07e-6bb7c3eef7bb": {
+                "size": {
+                    "width": 60,
+                    "height": 60
+                },
+                "position": {
+                    "x": 599,
+                    "y": 101
+                },
+                "z": 0,
+                "dependson": [
+                    "86fd21f1-05d1-4020-97fc-a097d11c2496"
+                ]
+            },
+            "071eabb2-9efb-4e66-8119-fc60844e7e9b": {
+                "source": {
+                    "id": "f4ddff80-5d5d-49ca-b07e-6bb7c3eef7bb"
+                },
+                "target": {
+                    "id": "86fd21f1-05d1-4020-97fc-a097d11c2496"
+                },
+                "z": 1
+            },
+            "394f81c8-0496-4b2a-af84-74c231195d08": {
+                "size": {
+                    "width": 60,
+                    "height": 60
+                },
+                "position": {
+                    "x": 196,
+                    "y": 66
+                },
+                "z": 0,
+                "dependson": [
+                    "86fd21f1-05d1-4020-97fc-a097d11c2496"
+                ]
+            },
+            "fc527b54-2774-445a-8698-f3cdcd159a66": {
+                "size": {
+                    "width": 60,
+                    "height": 60
+                },
+                "position": {
+                    "x": 210,
+                    "y": 162
+                },
+                "z": 0,
+                "dependson": [
+                    "394f81c8-0496-4b2a-af84-74c231195d08"
+                ]
+            },
+            "c3219d79-8c0f-466f-83bf-5ea90f21fcfe": {
+                "source": {
+                    "id": "fc527b54-2774-445a-8698-f3cdcd159a66"
+                },
+                "target": {
+                    "id": "394f81c8-0496-4b2a-af84-74c231195d08"
+                },
+                "z": 2
+            },
+            "54f25958-1c4a-4d98-9d0d-537754ce7a59": {
+                "source": {
+                    "id": "394f81c8-0496-4b2a-af84-74c231195d08"
+                },
+                "target": {
+                    "id": "86fd21f1-05d1-4020-97fc-a097d11c2496"
+                },
+                "z": 3
+            }
+        }
+    },
+    "Resources": {
+        "Type": "AWS::S3::Bucket",
+        "Properties": {},
+        "Metadata": {
+            "AWS::CloudFormation::Designer": {
+                "id": "86fd21f1-05d1-4020-97fc-a097d11c2496"
+            }
+        },
+        "S3BP4OKC0": {
+            "Type": "AWS::S3::BucketPolicy",
+            "Properties": {},
+            "Metadata": {
+                "AWS::CloudFormation::Designer": {
+                    "id": "f4ddff80-5d5d-49ca-b07e-6bb7c3eef7bb"
+                }
+            }
+        },
+        "EC2I1620X": {
+            "Type": "AWS::EC2::Instance",
+            "Properties": {},
+            "Metadata": {
+                "AWS::CloudFormation::Designer": {
+                    "id": "394f81c8-0496-4b2a-af84-74c231195d08"
+                }
+            }
+        },
+        "EC2SGM5NW": {
+            "Type": "AWS::EC2::SecurityGroup",
+            "Properties": {},
+            "Metadata": {
+                "AWS::CloudFormation::Designer": {
+                    "id": "fc527b54-2774-445a-8698-f3cdcd159a66"
+                }
+            },
+            "DependsOn": [
+                "EC2I1620X"
+            ]
+        }
+    }
 }
